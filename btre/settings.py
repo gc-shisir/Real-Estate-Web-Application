@@ -81,12 +81,16 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'btredb',
-        'USER':'postgres',
-        'PASSWORD':'12345678',
-        'HOST':'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'btredb',
+    #     'USER':'postgres',
+    #     'PASSWORD':'12345678',
+    #     'HOST':'localhost'
+    # }
 }
 
 
@@ -121,6 +125,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 
 # Static files (CSS, JavaScript, Images)
